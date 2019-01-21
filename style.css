@@ -1,0 +1,78 @@
+
+/* Css grid Basic */
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 35% 25% 40%;
+    grid-gap: 10px;
+}
+
+.wrapper > div{
+    background: #eee;
+    padding: 15px;
+    /* margin: 10px; */
+}
+.wrapper > div:nth-child(odd){
+    background: #ddd;
+}
+
+/* CSS Grid Advance */
+
+.divider{
+    margin: 20px;
+    height: 10px;
+    background: rgb(141, 140, 140);
+}
+
+.grid{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat( 2, 1fr 2fr);
+    grid-auto-rows: minmax(50px,auto);
+}
+.grid > div{
+    background: #eee;
+    padding: 15px;
+    /* margin: 10px; */
+}
+.grid > div:nth-child(odd){
+    background: #ddd;
+}
+
+.boxContainer{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+.boxContainer > div{
+    background: #ddd;
+    padding: 15px;
+    text-align: center;
+    /* vertical-align: middle; */
+}
+
+.boxContainer > div:nth-child(odd){
+    background: #eee;
+}
+
+.box1{
+    grid-area: 1/ 1/ span 2/ span 2;
+    /* background-image: url("pic11.jpg"); */
+}
+.box2{
+    grid-area: 1/ 3/ span 3/ span 1;
+}
+.box3{
+    grid-area: 3/ 2/ span 2/ span 1;
+}
+.box4{
+    grid-area: 3/ 1/ span 2/ span 1;
+}
+.box5{
+    grid-area: 4/ 3/ span 1/ span 1;
+}
+.img{
+    max-width: 100%;
+    height: auto;
+}
